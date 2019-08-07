@@ -154,17 +154,15 @@ ytd-rich-metadata-renderer, ytd-post-renderer, ytd-mini-guide-renderer, ytd-mini
    color: var(--accent-cyan) !important;
 }
 
-/* YouTube logos */
-
-#youtube-red-paths path.ytd-topbar-logo-renderer, #youtube-paths path.ytd-topbar-logo-renderer, paper-tabs.ytd-c4-tabbed-header-renderer  {
-   fill: var(--secondary-white) !important;
-}
-
 /* App drawer */
 
 app-drawer #header yt-icon, app-drawer #header #logo-red-icon-container path, app-drawer #header .title {
    color: var(--main-background) !important;
    fill: var(--main-background) !important;
+}
+
+app-drawer g.ytd-topbar-logo-renderer path, app-drawer #youtube-paths path {
+    fill: var(--main-background) !important;
 }
 
 app-drawer #header, ytd-active-account-header-renderer, ytd-simple-menu-header-renderer {
@@ -186,6 +184,10 @@ paper-tab.ytd-c4-tabbed-header-renderer:hover {
 
 paper-tab.iron-selected.ytd-c4-tabbed-header-renderer, #channel-title, #label-text {
    color: var(--accent-magenta) !important;
+}
+
+paper-tabs.ytd-c4-tabbed-header-renderer  {
+   fill: var(--secondary-white) !important;
 }
 
 /* Account menu */
