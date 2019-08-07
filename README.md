@@ -1,5 +1,5 @@
 # youtube-sweet
-A YouTube theme that matches hyper-sweet.
+A YouTube theme that matches [hyper-sweet](https://github.com/EliverLara/hyper-sweet) and [Sweet-Dark](https://addons.mozilla.org/en-US/firefox/addon/sweet-dark) by EliverLara.
 
 ## Screenshots
 
