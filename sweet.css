@@ -1,154 +1,214 @@
 :root {
-   --yt-spec-text-primary: #F2EFEA !important;
-   --yt-spec-text-secondary: #C3C7D1 !important;
-   --yt-button-color: #7cb7ff !important;
+   /* Custom colors */
+   --primary-white: #F2EFEA;
+   --secondary-white: #C3C7D1;
+
+   --main-background: #161925;
+   --accent-background: rgb(15, 18, 27);
+
+   --accent-cyan: #7CB7FF;
+   --accent-magenta: #C50ED2;
+
+   /* YouTube variable overrides */
+   --yt-spec-text-primary: var(--primary-white) !important;
+   --yt-spec-text-secondary: var(--secondary-white) !important;
+   --yt-button-color: var(--accent-cyan) !important;
 
    --ytd-comment-text-color: var(--yt-spec-text-secondary) !important;
-   --yt-expand-color: #7cb7ff !important;
-   --yt-notification-button-bubble_-_background-color: #7cb7ff !important;
+   --yt-expand-color: var(--yt-button-color) !important;
+   --yt-notification-button-bubble_-_background-color: var(--accent-cyan) !important;
    --yt-placeholder-text-color: rgba(230, 230, 230, 150) !important;
-   --yt-searchbox-text-color: car(--yt-spec-text-secondary) !important;
-   --yt-spec-brand-icon-active: #c10ed2 !important;
-   --yt-endpoint-hover-color: #7cb7ff !important;
+   --yt-searchbox-text-color: var(--yt-spec-text-secondary) !important;
+   --yt-spec-brand-icon-active: var(--accent-magenta) !important;
+   --yt-endpoint-hover-color: var(--accent-cyan) !important;
 }
 
+/* Set the background for main UI components */
+
 html, ytd-browse, ytd-watch, .ytd-searchbox, ytd-app, ytd-watch-flexy, #columns.ytd-watch-flexy, ytd-button-renderer.yt-horizontal-list-renderer.arrow, ytd-multi-page-menu-renderer {
-   background-color: #161925 !important;
+   background-color: var(--main-background) !important;
 }
+
+/* Buttons */
 
 paper-button, ytd-button-renderer {
    border-color: var(--yt-button-color);
    color: var(--yt-button-color);
 }
 
+#subscribe-button ytd-button-renderer {
+   background: linear-gradient(to right, var(--accent-magenta), var(--accent-cyan)) !important;
+}
+
+.ytd-subscribe-button-renderer, #submit-button {
+   background-color: var(--accent-background) !important;
+   border-color: var(--accent-magenta) !important;
+   border-image: linear-gradient(to right, var(--accent-magenta), var(--accent-cyan)) 1 !important;
+   border-width: 2px !important;
+   color: var(--accent-magenta) !important;
+}
+
+#subscribe-button ytd-button-renderer yt-formatted-string {
+   color: var(--accent-background) !important;
+}
+
+ytd-button-renderer.ytd-movie-offer-module-renderer, a.ytd-movie-offer-module-renderer, ytd-guide-renderer.ytd-app {
+   background: var(--accent-background) !important;
+}
+
+/* Text */
+
 a {
-   color: #c10ed2;
+   color: var(--accent-magenta);
 }
 
 #video-title {
-   color: #F2EFEA !important;
+   color: var(--primary-white) !important;
 }
 
 .content {
    color: var(--yt-spec-text-primary) !important;
 }
 
-.ytd-subscribe-button-renderer, #submit-button {
-   background-color: rgb(15, 18, 27) !important;
-   border-color: #c10ed2 !important;
-   border-image: linear-gradient(to right, #c10ed2, #7cb7ff) 1 !important;
-   border-width: 2px !important;
-   color: #c10ed2 !important;
-}
-
-#subscribe-button ytd-button-renderer {
-   background: linear-gradient(to right, #c10ed2, #7cb7ff) !important;
-}
-
-#subscribe-button ytd-button-renderer yt-formatted-string {
-   color: rgb(15, 18, 27) !important;
-}
-
 yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string:hover {
-   color: #7cb7ff !important;
+   color: var(--accent-cyan) !important;
    transition: .2s;
 }
 
-#like-bar {
-   background: linear-gradient(to right, #c10ed2, #7cb7ff) !important;
-}
+/* Search bar */
 
 #container.ytd-searchbox, #search-icon-legacy {
-   box-shadow: rgb(15, 18, 27) 0px 1px 2px 0px inset !important;
+   box-shadow: var(--accent-background) 0px 1px 2px 0px inset !important;
    border-color: #555753 !important;
    color: var(--yt-spec-text-secondary) !important;
 }
 
 ytd-searchbox[has-focus] #container.ytd-searchbox {
-   border-color: #c10ed2 !important;
-   -webkit-border-image: linear-gradient(to right, #c10ed2, #7cb7ff) !important;
-   border-image: linear-gradient(to right, #c10ed2, #7cb7ff) 1 !important;
+   border-color: var(--accent-magenta) !important;
+   -webkit-border-image: linear-gradient(to right, var(--accent-magenta), var(--accent-cyan)) !important;
+   border-image: linear-gradient(to right, var(--accent-magenta), var(--accent-cyan)) 1 !important;
 }
 
 ytd-searchbox[has-focus] #search-icon-legacy {
-   border-color: #7cb7ff !important;
+   border-color: var(--accent-cyan) !important;
 }
 
+/* Searchbox suggestions */
+
+.sbdd_b { /* Container */
+  border-color: var(--accent-magenta) !important;
+  -webkit-border-image: linear-gradient(to right, var(--accent-magenta), var(--accent-cyan)) !important;
+  border-image: linear-gradient(to right, var(--accent-magenta), var(--accent-cyan)) 1 !important;
+}
+
+.sbsb_a { /* Main pop-up */
+  background: var(--accent-background) !important;
+}
+
+.sbsb_d { /* Hovered selection */
+  background: rgba(0,0,0,.05) !important;
+}
+
+.sbsb_c { /* Suggested option text */
+  color: var(--secondary-white) !important;
+}
+
+.sbpqs_a { /* Previously selected option text */
+  color: var(--accent-magenta) !important;
+}
+
+.sbfl_b { /* Report search predictions footer */
+  background: rgba(0,0,0,0) !important;
+  color: var(--secondary-white) !important;
+}
+
+/* Watch page components */
+
 .ytp-scrubber-button.ytp-swatch-background-color {
-   background: #7cb7ff !important;
+   background: var(--accent-cyan) !important;
 }
 
 .ytp-swatch-background-color, #header.ytd-movie-offer-module-renderer {
-   background: linear-gradient(to right, #c10ed2, #7cb7ff) !important;
-}
-
-ytd-button-renderer.ytd-movie-offer-module-renderer, a.ytd-movie-offer-module-renderer, ytd-guide-renderer.ytd-app {
-   background: rgb(15, 18, 27) !important;
-}
-
-#masthead {
-   background: rgb(15, 18, 27) !important;
-   box-shadow: 0px 3px 2px 0px rgb(13, 16, 25);
+   background: linear-gradient(to right, var(--accent-magenta), var(--accent-cyan)) !important;
 }
 
 ytd-rich-metadata-renderer, ytd-post-renderer, ytd-mini-guide-renderer, ytd-mini-guide-entry-renderer {
-   background-color: rgb(15, 18, 27) !important;
-   color: #C3C7D1 !important;
+   background-color: var(--accent-background) !important;
+   color: var(--secondary-white) !important;
 }
 
 #title.ytd-rich-metadata-renderer, ytd-mini-guide-entry-renderer[active] a yt-icon, ytd-mini-guide-entry-renderer[active] a span, path.ytd-topbar-logo-renderer, #title {
-   color: #c10ed2 !important;
-   fill: #c10ed2 !important;
+   color: var(--accent-magenta) !important;
+   fill: var(--accent-magenta) !important;
 }
 
 .date, yt-icon, .ytd-mini-channel-renderer, .ytd-guide-entry-renderer, .ytp-title-link {
-   color: #C3C7D1 !important;
+   color: var(--secondary-white) !important;
 }
 
 #sponsor-button ytd-border-renderer a paper-button {
-   border-color: #7cb7ff !important;
+   border-color: var(--accent-cyan) !important;
 }
 
 .super-title a, .badge-style-type-verified yt-icon, #owner-name a {
-   color: #7cb7ff !important;
+   color: var(--accent-cyan) !important;
 }
+
+/* YouTube logos */
 
 #youtube-red-paths path.ytd-topbar-logo-renderer, #youtube-paths path.ytd-topbar-logo-renderer, paper-tabs.ytd-c4-tabbed-header-renderer  {
-   fill: #C3C7D1 !important;
+   fill: var(--secondary-white) !important;
 }
+
+/* App drawer */
 
 app-drawer #header yt-icon, app-drawer #header #logo-red-icon-container path, app-drawer #header .title {
-   color: #161925 !important;
-   fill: #161925 !important;
+   color: var(--main-background) !important;
+   fill: var(--main-background) !important;
 }
 
+app-drawer #header, ytd-active-account-header-renderer, ytd-simple-menu-header-renderer {
+   background: linear-gradient(to right, var(--accent-magenta), var(--accent-cyan)) !important;
+   color: var(--main-background) !important;
+}
+
+/* Channel page */
+
 #channel-header, #tabs-inner-container {
-   background: rgb(15, 18, 27) !important;
+   background: var(--accent-background) !important;
 }
 
 paper-tab.ytd-c4-tabbed-header-renderer:hover {
-   color: #C3C7D1 !important;
+   color: var(--secondary-white) !important;
    opacity: 0.6 !important;
    transition: opacity .2s;
 }
 
 paper-tab.iron-selected.ytd-c4-tabbed-header-renderer, #channel-title, #label-text {
-   color: #c10ed2 !important;
+   color: var(--accent-magenta) !important;
 }
 
-app-drawer #header, ytd-active-account-header-renderer, ytd-simple-menu-header-renderer {
-   background: linear-gradient(to right, #c10ed2, #7cb7ff) !important;
-   color: #161925 !important;
-}
+/* Account menu */
 
 ytd-active-account-header-renderer yt-formatted-string, ytd-active-account-header-renderer yt-formatted-string a, #back-button.ytd-simple-menu-header-renderer {
-   color: #161925 !important;
+   color: var(--main-background) !important;
+}
+
+/* Specific UI components */
+
+#like-bar {
+   background: linear-gradient(to right, var(--accent-magenta), var(--accent-cyan)) !important;
+}
+
+#masthead {
+   background: var(--accent-background) !important;
+   box-shadow: 0px 3px 2px 0px rgb(13, 16, 25);
 }
 
 ytd-author-comment-badge-renderer {
-   --ytd-author-comment-badge-background-color: #7cb7ff !important;
-   --ytd-author-comment-badge-name-color: #161925 !important;
-   --ytd-author-comment-badge-icon-color: #161925 !important;
+   --ytd-author-comment-badge-background-color: var(--accent-cyan) !important;
+   --ytd-author-comment-badge-name-color: var(--main-background) !important;
+   --ytd-author-comment-badge-icon-color: var(--main-background) !important;
 
    color: var(--ytd-author-comment-badge-name-color) !important;
    fill: var(--ytd-author-comment-badge-icon-color) !important;
