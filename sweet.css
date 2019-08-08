@@ -154,6 +154,38 @@ ytd-rich-metadata-renderer, ytd-post-renderer, ytd-mini-guide-renderer, ytd-mini
    color: var(--accent-cyan) !important;
 }
 
+/* Live chat */
+
+yt-live-chat-header-renderer {
+   background: var(--accent-background) !important;
+}
+
+#chat-messages {
+   background: var(--main-background) !important;
+   border: 3px solid var(--accent-background) !important;
+}
+
+.yt-live-chat-text-message-renderer {
+   color: var(--primary-white) !important;
+}
+
+.yt-live-chat-author-chip {
+   color: var(--primary-white) !important;
+}
+
+yt-live-chat-message-input-renderer {
+   background: var(--accent-background) !important;
+   color: var(--primary-white) !important;
+}
+
+#container.yt-live-chat-ticker-renderer {
+   background: var(--accent-background) !important;
+}
+
+ytd-toggle-button-renderer.ytd-live-chat-frame {
+   background: var(--accent-background) !important;
+}
+
 /* App drawer */
 
 app-drawer #header yt-icon, app-drawer #header #logo-red-icon-container path, app-drawer #header .title {
