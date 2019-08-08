@@ -21,6 +21,7 @@
    --yt-searchbox-text-color: var(--yt-spec-text-secondary) !important;
    --yt-spec-brand-icon-active: var(--accent-magenta) !important;
    --yt-endpoint-hover-color: var(--accent-cyan) !important;
+   --yt-live-chat-message-highlight-background-color: var(--accent-background) !important;
 }
 
 /* Set the background for main UI components */
