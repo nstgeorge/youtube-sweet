@@ -53,7 +53,7 @@ paper-button, ytd-button-renderer {
    color: var(--accent-background) !important;
 }
 
-ytd-button-renderer.ytd-movie-offer-module-renderer, a.ytd-movie-offer-module-renderer, ytd-guide-renderer.ytd-app {
+ytd-button-renderer.ytd-movie-offer-module-renderer, a.ytd-movie-offer-module-renderer, ytd-guide-renderer.ytd-app{
    background: var(--accent-background) !important;
 }
 
@@ -74,6 +74,26 @@ a {
 yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string:hover {
    color: var(--accent-cyan) !important;
    transition: .2s;
+}
+
+/* Playlists */
+
+ytd-playlist-panel-renderer #container .header, ytd-playlist-panel-renderer #container #items, ytd-playlist-sidebar-renderer  {
+   background: var(--accent-background) !important;
+}
+
+ytd-two-column-browse-results-renderer {
+   background: var(--primary-background) !important;
+}
+
+ytd-two-column-browse-results-renderer #secondary {
+   background: var(--accent-background) !important;
+}
+
+/* Miniplayer */
+
+#card {
+   background: var(--accent-background) !important;
 }
 
 /* Search bar */
